@@ -3,15 +3,6 @@
 if [ ! -d "$HOME/TrajOptKP" ]; then
     git clone --recursive git@github.com:DMackRus/TrajOptKP.git
 
-    #Install yaml-cpp
-    git clone git@github.com:jbeder/yaml-cpp.git
-    cd yaml-cpp 
-    mkdir build
-    cd build 
-    cmake ..
-    make 
-    make install 
-
     cd $HOME
     
     # Install MuJoCo
@@ -19,17 +10,17 @@ if [ ! -d "$HOME/TrajOptKP" ]; then
     cd mujoco_temp
     mkdir build
     cd build
+    cmake ..
+    cmake --build .
     cmake .. -DCMAKE_INSTALL_PREFIX="~/mujoco"
     cmake --install .
     
     #Remove temp MuJoCo directory
     cd $HOME
-    rm -rf /mujoco_temp
+    rm -rf mujoco_temp
     
     # Export environment variables to bashrc
     echo export MJ_HOME='"'$(pwd)/mujoco'"' >> ~/.bashrc
-
-    
 fi
 
 

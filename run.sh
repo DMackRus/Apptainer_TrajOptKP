@@ -19,6 +19,6 @@ singularity run \
     --bind=/run/user/${UID} \
     --home=home:${HOME} \
     --bind=$HOME/.ssh \
-    pandaplanning
+    TrajOptKP_apptainer
 
     #$(if lspci | grep -qi nvidia; then echo ' --nv'; else echo ''; fi) \

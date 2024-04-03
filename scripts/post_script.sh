@@ -24,13 +24,13 @@ apt-get install -y --force-yes \
     mesa-utils \
     software-properties-common \
     libglfw3 \
-    libglfw3-dev \	# GLFW3 for visualisation
-    libxinerama-dev \	# MuJoCo build dependancy
-    libxcursor \	# MuJoCo build dependancy
-    libxi \		# MuJoCo build dependancy
-    libeigen3-dev \	# Eigen
-    libyaml-cpp-dev \	# Yaml reader
-    libgtest-dev	# Google test
+    libglfw3-dev \
+    libxinerama-dev \
+    libxcursor-dev \
+    libxi-dev \
+    libeigen3-dev \
+    libyaml-cpp-dev \
+    libgtest-dev
 
 # Packages and installations of drake
 # Install glibc6
@@ -59,7 +59,7 @@ apt install -y --force-yes firefox
 CUSTOM_ENV=/.singularity.d/env/99-zz_custom_env.sh
 cat >$CUSTOM_ENV <<EOF
 #!/bin/bash
-PS1="[TrajOptKP_Sing] Singularity> \w \$ "
+PS1="[TrajOptKP_apptainer] Singularity> \w \$ "
 EOF
 chmod 755 $CUSTOM_ENV
 
