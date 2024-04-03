@@ -63,3 +63,20 @@ PS1="[TrajOptKP_apptainer] Singularity> \w \$ "
 EOF
 chmod 755 $CUSTOM_ENV
 
+# Install MuJoCo
+git clone git@github.com:DMackRus/mujoco.git mujoco_temp
+cd mujoco_temp
+mkdir build
+cd build
+cmake ..
+cmake --build .
+cmake .. -DCMAKE_INSTALL_PREFIX="~/mujoco"
+cmake --install .
+
+#Remove temp MuJoCo directory
+cd $HOME
+rm -rf mujoco_temp
+
+# Export environment variables to bashrc
+echo export MJ_HOME='"'$(pwd)/mujoco'"' >> ~/.bashrc
+

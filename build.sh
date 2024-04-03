@@ -9,3 +9,5 @@ singularity build --fakeroot \
 # the network. The following command will tell git to ignore changes to that
 # file henceforth.
 git update-index --assume-unchanged home/.bashrc
+
+#singularity build <image-name>.img <container-file>

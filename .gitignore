@@ -3,6 +3,10 @@
 *.swo
 
 TrajOptKP_apptainer
+TrajOptKP.img
+
+TrajOptKP/*
+mujoco/*
 
 !home/
 home/*
