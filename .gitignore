@@ -21,3 +21,5 @@ home/catkin_ws/src/*
 
 !home/.bashrc
 !home/catkin_ws/src/CMakeLists.txt
+
+TrajOptKP.sif
