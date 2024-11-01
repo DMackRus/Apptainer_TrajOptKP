@@ -20,4 +20,5 @@ singularity run \
     --bind=/run/user/${UID} \
     --home=home:${HOME} \
     --bind=$HOME/.ssh \
+    --bind /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu \	# Needed for gpu rendering for OpenGL. I think.
     TrajOptKP_apptainer
