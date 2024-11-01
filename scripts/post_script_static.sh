@@ -5,7 +5,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y keyboard-configuration
 DEBIAN_FRONTEND=noninteractive TZ="Europe/London" apt-get install -y tzdata
 apt-get -y upgrade
 
-apt-get install -y --force-yes \
+apt-get install -y \
     build-essential \
     cmake \
     mesa-utils \
