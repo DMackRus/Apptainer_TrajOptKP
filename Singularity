@@ -9,6 +9,7 @@ AUTHOR David Russell
     export LANG=C.UTF-8
     export LC_ALL=C.UTF-8
     export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/clion-2022.3.3/bin
+    export LD_LIBRARY_PATH=/host-libs:/usr/lib/x86_64-linux-gnu:/.singularity.d/libs
 
 %files
   scripts /scripts

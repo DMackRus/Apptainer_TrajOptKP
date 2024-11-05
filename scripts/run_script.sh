@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# TODO: cd into the dir you joust binded
-# TODO: make/build
-# TODO: running the unit tests
-
 if [ ! -d "$HOME/TrajOptKP" ]; then
 	# Install MuJoCo
 	git clone git@github.com:DMackRus/mujoco.git mujoco_temp
@@ -26,6 +22,11 @@ if [ ! -d "$HOME/TrajOptKP" ]; then
     	git clone --recursive git@github.com:DMackRus/TrajOptKP.git
 
     	cd $HOME
+    	
+    	# Add LD_LIBRARY_PATH to liraries for openGL to use GPU rendering
+    	echo export LD_LIBRARY_PATH=/host-libs:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH >> ~/.bashrc
+
+    	
     
 fi
 

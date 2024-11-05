@@ -19,6 +19,22 @@ singularity run \
     --bind=scripts:/scripts \
     --bind=/run/user/${UID} \
     --home=home:${HOME} \
+    --bind /usr/lib/x86_64-linux-gnu:/host-libs \
     --bind=$HOME/.ssh \
-    --bind /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu \	# Needed for gpu rendering for OpenGL. I think.
     TrajOptKP_apptainer
+    
+    #--bind /usr/lib/x86_64-linux-gnu/libGL.so.1:/usr/lib/x86_64-linux-gnu/libGL.so.1 \
+    #--bind /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.550.120:/usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.550.120 \
+    #--bind /usr/lib/x86_64-linux-gnu/libnvidia-tls.so.550.120:/usr/lib/x86_64-linux-gnu/libnvidia-tls.so.550.120 \
+    #--bind /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.0:/usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.0 \
+    #--bind /usr/lib/nvidia:/usr/lib/nvidia \
+    
+    #--bind /usr/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu \
+    
+    
+    
+    
+    
+    
+    
+    
